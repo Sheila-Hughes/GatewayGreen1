@@ -154,3 +154,29 @@ footer { background:#132f2c }
   .strip .wrap { grid-template-columns:1fr; gap:1.25rem }
   .partner-group .logos a:nth-child(even) { border-left:1px solid #c7d3c6 }
 }
+
+/* Readability and logo sizing */
+body { font-size:1.125rem; line-height:1.7 }
+.brand { flex-shrink:0 }
+.brand img { width:320px; max-width:100%; height:auto }
+header .bar { min-height:108px }
+nav a,.button { font-size:1rem }
+.tag { font-size:.875rem }
+.logos a { font-size:.9rem; line-height:1.4; padding:.75rem .6rem }
+.mark { width:160px; height:64px }
+.partner-group .mark { width:160px; height:64px }
+.partner-group + .partner-group .logos { grid-template-columns:repeat(5,minmax(0,1fr)) }
+.site-photo figcaption,figcaption,.copyright { font-size:.9375rem; line-height:1.6 }
+@media(max-width:1000px) {
+ header .bar { flex-wrap:wrap; padding-block:1rem }
+ .partner-group + .partner-group .logos { grid-template-columns:repeat(3,minmax(0,1fr)) }
+}
+@media(max-width:780px) {
+ .brand img { width:280px; max-width:calc(100vw - 40px) }
+ header .bar { min-height:0 }
+ body { font-size:1.0625rem; line-height:1.7 }
+ nav a { font-size:1rem }
+}
+@media(max-width:680px) {
+ .partner-group + .partner-group .logos { grid-template-columns:repeat(2,minmax(0,1fr)) }
+}
